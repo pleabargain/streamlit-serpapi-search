@@ -7,7 +7,8 @@ This Streamlit application allows users to perform advanced web searches using t
 - **Region Selection**: Choose from predefined regions to narrow down your search.
 - **Target Areas**: Select specific target areas for more focused search results.
 - **Additional Search Terms**: Add custom terms to refine your search query.
-- **Save Results**: Select and save search results to a CSV file with a timestamp.
+- **Save Results**: Select and save search results to a CSV file with region and timestamp.
+- **Customizable Summary Length**: Adjust the character length of result summaries through the UI.
 
 ## Prerequisites
 
@@ -18,8 +19,8 @@ This Streamlit application allows users to perform advanced web searches using t
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/yourrepository.git
-   cd yourrepository
+   git clone https://github.com/pleabargain/streamlit-serpapi-search.git
+   cd streamlit-serpapi-search
    ```
 
 2. Install the required packages:
@@ -47,21 +48,32 @@ This Streamlit application allows users to perform advanced web searches using t
 
 5. **Additional Search Terms**: Enter any additional terms to refine your search.
 
-6. **Enter API Key**: Input your SERPAPI API key in the sidebar if not already set in the `.env` file.
+6. **Customize Display**: Adjust the number of results and summary length using the sliders.
 
-7. **Search**: Click the "Search" button to perform the search.
+7. **Enter API Key**: Input your SERPAPI API key in the sidebar if not already set in the `.env` file.
 
-8. **Select Results**: Use the checkboxes to select the results you want to save.
+8. **Search**: Click the "Search" button to perform the search.
 
-9. **Save Results**: Click "Save Selected Results" to save the selected results to a CSV file. The file will include the search query and a timestamp in its name.
+9. **Select Results**: Use the checkboxes to select the results you want to save.
 
-10. **Download CSV**: Use the download button to download the CSV file.
+10. **Save Results**: Click "Save Selected Results" to save the selected results to a CSV file. The file will be named in the format: `region_query_timestamp.csv`.
+
+## File Naming Convention
+
+Files are saved with the following format:
+- `region_query_timestamp.csv`
+Example: `saudi_arabia_outbound_luxury_travel_20241118_135027.csv`
 
 ## Notes
 
 - Ensure your SERPAPI API key is valid and has sufficient quota for the searches.
 - The application uses session state to maintain search results across interactions.
+- Search results can be selected and saved without page refreshes.
 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Source Repository
+
+This project is available at [github.com/pleabargain/streamlit-serpapi-search](https://github.com/pleabargain/streamlit-serpapi-search)
